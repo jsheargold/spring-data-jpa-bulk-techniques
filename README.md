@@ -70,13 +70,13 @@ spring.jpa.properties.hibernate.jdbc.batch_size=100
 
 ## Results
 
-The tests results outlined below were run obtained on a laptop with a i7-8550U CPU and 8GB of RAM, to reduce the impact of rouge results each approach was run 100 time each of which inserted 10,000 records into the database. The approaches are listed below in order of time taken with the quickest average time first.
+The tests results outlined below were obtained on a laptop with a i7-8550U CPU and 8GB of RAM, to reduce the impact of rouge results each approach was run 100 time, each of which inserted 10,000 records into the database. The approaches are listed below in order of time taken with the quickest average time first.
 
 | Average Time | Approach |
 | --- | --- | 
-| 272ms| 5 - JPARepository Manual ID with Hibernate batching |
+| 272ms| 6 - JPARepository Manual ID with Hibernate batching |
 | 288ms| 2 - Flush and Clear ManualId with Hibernate batching |
-|1497ms| 6 - JPARepository Manual ID |
+|1497ms| 5 - JPARepository Manual ID |
 |1989ms| 1 - Flush and Clear AutoID with Hibernate batching |
 |2542ms| 3 - JPARepository Auto ID |
 |2986ms| 4 - JPARepository Auto ID with Hibernate batching |
